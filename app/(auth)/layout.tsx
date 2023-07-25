@@ -1,4 +1,3 @@
-
 import GlassPane from "components/GlassPane";
 import "../../styles/global.css";
 
