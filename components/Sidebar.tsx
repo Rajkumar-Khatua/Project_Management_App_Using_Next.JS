@@ -17,16 +17,14 @@ const links = [
   },
 ];
 
-const Sidebar = ()=>{
-    return(
-        <Card className="h-full w-40 flex items-center justify-between flex-wrap">
-            {/* TODO */}
-      {/* <div className="w-full flex justify-center items-center">
-        <Image src={logo} alt="Able logo" priority className="w-14" />
-      </div> */}
+const Sidebar = () => {
+  return (
+    <Card className="h-full w-40 flex items-center justify-between flex-wrap">
       {links.map((link) => (
         <SidebarLink link={link} />
       ))}
     </Card>
-    )
-}
+  );
+};
+
+export default Sidebar;

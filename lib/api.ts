@@ -18,13 +18,13 @@ const fetcher = async ({ url, method, body, json = true }) => {
     return data.data;
   }
 };
-//register api call 
+//register api call
 export const register = async (user) => {
   return fetcher({
     url: "/api/register",
     method: "POST",
     body: user,
-    json: false,
+    // json: false,
   });
 };
 
@@ -34,6 +34,15 @@ export const signin = async (user) => {
     url: "/api/signin",
     method: "POST",
     body: user,
-    json: false,
+    // json: false,
   });
 };
+
+// create a new project
+export const createNewProject = async (name) => {
+return fetcher({
+  url: "/api/project",
+  method: "POST",
+  body:{name},
+})
+}

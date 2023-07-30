@@ -1,8 +1,11 @@
 import bcrypt from "bcrypt";
 import { SignJWT, jwtVerify } from "jose";
+import { db } from "./db";
+
+
 export const hashPassword = (password) => bcrypt.hash(password, 10);
 
-const comparePaswords = (plaintextPassword, hashedPassword) =>
+export const comparePaswords = (plaintextPassword, hashedPassword) =>
   bcrypt.compare(plaintextPassword, hashedPassword);
 
   // CREATE JWT
